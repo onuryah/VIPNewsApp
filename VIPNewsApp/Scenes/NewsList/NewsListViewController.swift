@@ -170,12 +170,14 @@ extension NewsListViewController {
 
 extension NewsListViewController {
     private func sendNewsTitleToFirebase(title: String) {
+        interactor?.getSelectedIndexForFirebase(title: title)
     }
     private func startIndicator() {
     }
     private func saveFavoritedNews(name: String, title: String, urlToImage: String?, content: String?){
         interactor?.save(name: name, title: title, urlToImage: urlToImage, content: content)
     }
+
 }
 
 

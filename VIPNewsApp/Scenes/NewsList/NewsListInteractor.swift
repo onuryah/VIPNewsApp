@@ -18,6 +18,7 @@ protocol NewsListBusinessLogic
     func getFavoritedNews(request: News.FetchManagedPost.Request)
     func deleteData(name: String, title: String, urlToImage: String?, content: String?)
     func save(name: String, title: String, urlToImage: String?, content: String?)
+    func getSelectedIndexForFirebase(title: String)
 }
 
 protocol NewsListDataStore
@@ -34,6 +35,7 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
     var presenter: NewsListPresentationLogic?
     var worker: NewsListWorker?
     internal var savedNews: [Article]?
+    private var firebaseEventsGetter : EventsGetter?
   
     func fetchNews(request: News.FetchPost.Request)
   {
@@ -64,5 +66,10 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
     func save(name: String, title: String, urlToImage: String?, content: String?) {
         coreDataAdjusterWoker = CoreDataWorker()
         coreDataAdjusterWoker?.save(name: name, title: title, urlToImage: urlToImage, content: content)
+    }
+    
+    func getSelectedIndexForFirebase(title: String) {
+        firebaseEventsGetter = FirebaseWorker()
+        firebaseEventsGetter?.getSelectedIndexForFirebase(title: title)
     }
 }
