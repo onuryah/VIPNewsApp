@@ -22,6 +22,8 @@ protocol FavoritesDisplayLogic: class
 
 class FavoritesViewController: UIViewController, FavoritesDisplayLogic
 {
+    @IBOutlet weak var favoritesTableView: UITableView!
+    
     private lazy var news : Observable<[Article]> = Observable.just(newData)
     private  var newData : [Article] = [] {
         didSet {

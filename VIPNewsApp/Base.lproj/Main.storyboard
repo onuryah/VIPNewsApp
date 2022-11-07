@@ -275,7 +275,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="Y2h-rZ-29g"/>
                     <connections>
-                        <outlet property="favoritesTableView" destination="Ydj-m6-SUj" id="FK2-YH-rc6"/>
+                        <outlet property="favoritesTableView" destination="Ydj-m6-SUj" id="vnF-QY-UGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hN-sE-liR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
