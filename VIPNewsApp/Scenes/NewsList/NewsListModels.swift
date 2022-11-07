@@ -30,4 +30,18 @@ struct News
       var errorMessage:String?
     }
   }
+    struct FetchManagedPost
+    {
+      struct Request
+      {
+      }
+      struct Response
+      {
+        var data:[Article]?
+      }
+      struct ViewModel
+      {
+        var post:[Article]?
+      }
+    }
 }
