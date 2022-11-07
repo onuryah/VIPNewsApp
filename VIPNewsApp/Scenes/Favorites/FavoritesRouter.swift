@@ -35,7 +35,7 @@ class FavoritesRouter: NSObject, FavoritesRoutingLogic, FavoritesDataPassing
         passDataToNewDetails(source: dataStore!, destination: &destinationDS)
       } else {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let destinationVC = storyboard.instantiateViewController(withIdentifier: "NewDetailsViewController") as! NewsDetailsViewController
+          let destinationVC = storyboard.instantiateViewController(withIdentifier: "NewsDetailsViewController") as! NewsDetailsViewController
         var destinationDS = destinationVC.router!.dataStore!
         passDataToNewDetails(source: dataStore!, destination: &destinationDS)
           navigateToDetails(source: viewController!, destination: destinationVC)
@@ -46,7 +46,6 @@ class FavoritesRouter: NSObject, FavoritesRoutingLogic, FavoritesDataPassing
   {
     source.show(destination, sender: nil)
   }
-    
   
     private func passDataToNewDetails(source: FavoritesDataStore, destination: inout NewsDetailsDataStore)
   {

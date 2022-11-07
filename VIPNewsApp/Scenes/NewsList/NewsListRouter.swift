@@ -35,7 +35,7 @@ class NewsListRouter: NSObject, NewsListRoutingLogic, NewsListDataPassing
         passDataToNewDetails(source: dataStore!, destination: &destinationDS)
       } else {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          var destinationVC = storyboard.instantiateViewController(withIdentifier: "NewDetailsViewController") as! NewsDetailsViewController
+          var destinationVC = storyboard.instantiateViewController(withIdentifier: "NewsDetailsViewController") as! NewsDetailsViewController
         var destinationDS = destinationVC.router!.dataStore!
         passDataToNewDetails(source: dataStore!, destination: &destinationDS)
           navigateToNewDetails(source: viewController!, destination: &destinationVC)
