@@ -107,6 +107,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="News" id="quj-wE-Ngg"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="eYn-ET-4aO" id="pcJ-fk-5Op"/>
                         <outlet property="tableView" destination="7Fl-a7-6Gj" id="FOY-bS-JUY"/>
                     </connections>
                 </viewController>

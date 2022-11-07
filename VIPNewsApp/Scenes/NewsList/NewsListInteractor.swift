@@ -19,6 +19,8 @@ protocol NewsListBusinessLogic
     func deleteData(name: String, title: String, urlToImage: String?, content: String?)
     func save(name: String, title: String, urlToImage: String?, content: String?)
     func getSelectedIndexForFirebase(title: String)
+    func showActivityIndicator(viewForActivityIndicator: UIView, activityIndicatorView: UIActivityIndicatorView,favoritesCount: Int, loadingTextLabel: UILabel, view: UIView)
+    func stopActivityIndicator(viewForActivityIndicator: UIView, activityIndicatorView: UIActivityIndicatorView)
 }
 
 protocol NewsListDataStore
@@ -71,5 +73,13 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
     func getSelectedIndexForFirebase(title: String) {
         firebaseEventsGetter = FirebaseWorker()
         firebaseEventsGetter?.getSelectedIndexForFirebase(title: title)
+    }
+    
+    func showActivityIndicator(viewForActivityIndicator: UIView, activityIndicatorView: UIActivityIndicatorView,favoritesCount: Int, loadingTextLabel: UILabel, view: UIView) {
+        worker?.showActivityIndicator(viewForActivityIndicator: viewForActivityIndicator, activityIndicatorView: activityIndicatorView, favoritesCount: favoritesCount, loadingTextLabel: loadingTextLabel, view: view)
+    }
+    
+    func stopActivityIndicator(viewForActivityIndicator: UIView, activityIndicatorView: UIActivityIndicatorView) {
+        worker?.stopActivityIndicator(viewForActivityIndicator: viewForActivityIndicator, activityIndicatorView: activityIndicatorView)
     }
 }

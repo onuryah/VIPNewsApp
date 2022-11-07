@@ -22,6 +22,7 @@ protocol NewsListDisplayLogic: AnyObject
 
 class NewsListViewController: UIViewController, NewsListDisplayLogic
 {
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var interactor: NewsListBusinessLogic?
   var router: (NSObjectProtocol & NewsListRoutingLogic & NewsListDataPassing)?
@@ -33,6 +34,8 @@ class NewsListViewController: UIViewController, NewsListDisplayLogic
     }
     private lazy var news : Observable<[Article]> = Observable.just(newData)
     private var savedArray = [Article]()
+    private let viewForActivityIndicator = UIView()
+    private let loadingTextLabel = UILabel()
 
   // MARK: Object lifecycle
   
@@ -173,11 +176,12 @@ extension NewsListViewController {
         interactor?.getSelectedIndexForFirebase(title: title)
     }
     private func startIndicator() {
+        interactor?.showActivityIndicator(viewForActivityIndicator: viewForActivityIndicator, activityIndicatorView: activityIndicatorView, favoritesCount: savedArray.count, loadingTextLabel: loadingTextLabel, view: view)
     }
+    
     private func saveFavoritedNews(name: String, title: String, urlToImage: String?, content: String?){
         interactor?.save(name: name, title: title, urlToImage: urlToImage, content: content)
     }
-
 }
 
 

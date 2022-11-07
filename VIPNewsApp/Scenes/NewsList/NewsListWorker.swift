@@ -34,4 +34,30 @@ class NewsListWorker
             }
         }
     }
+    
+    func showActivityIndicator(viewForActivityIndicator: UIView, activityIndicatorView: UIActivityIndicatorView,favoritesCount: Int, loadingTextLabel: UILabel, view: UIView) {
+        viewForActivityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: view.frame.size.height)
+        viewForActivityIndicator.backgroundColor = UIColor.white
+        view.addSubview(viewForActivityIndicator)
+
+        activityIndicatorView.center = CGPoint(x: view.frame.size.width / 2.0, y: view.frame.size.height / 2.0)
+
+        loadingTextLabel.textColor = UIColor.black
+        loadingTextLabel.text = "Favorites count: \(favoritesCount)"
+        loadingTextLabel.font = UIFont(name: "Avenir Light", size: 14)
+        loadingTextLabel.sizeToFit()
+        loadingTextLabel.center = CGPoint(x: activityIndicatorView.center.x, y: activityIndicatorView.center.y + 30)
+        viewForActivityIndicator.addSubview(loadingTextLabel)
+
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.style = .gray
+        viewForActivityIndicator.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
+    }
+    
+    func stopActivityIndicator(viewForActivityIndicator: UIView, activityIndicatorView: UIActivityIndicatorView) {
+        viewForActivityIndicator.removeFromSuperview()
+        activityIndicatorView.stopAnimating()
+        activityIndicatorView.hidesWhenStopped = true
+    }
 }
