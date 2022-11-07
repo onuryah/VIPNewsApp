@@ -16,6 +16,8 @@ protocol NewsListBusinessLogic
 {
     func fetchNews(request: News.FetchPost.Request)
     func getFavoritedNews(request: News.FetchManagedPost.Request)
+    func deleteData(name: String, title: String, urlToImage: String?, content: String?)
+    func save(name: String, title: String, urlToImage: String?, content: String?)
 }
 
 protocol NewsListDataStore
@@ -26,6 +28,7 @@ protocol NewsListDataStore
 
 class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
 {
+    private var coreDataAdjusterWoker: NewsAdjuster?
     private var coreDataFetcherWorker: NewsFetcher?
     internal var new: [Article]?
     var presenter: NewsListPresentationLogic?
@@ -51,5 +54,15 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
             self.presenter?.presentFetchedManagedNews(response: response)
             
         })
+    }
+    
+    func deleteData(name: String, title: String, urlToImage: String?, content: String?) {
+        coreDataAdjusterWoker = CoreDataWorker()
+        coreDataAdjusterWoker?.deleteData(name: name, title: title, urlToImage: urlToImage, content: content)
+    }
+    
+    func save(name: String, title: String, urlToImage: String?, content: String?) {
+        coreDataAdjusterWoker = CoreDataWorker()
+        coreDataAdjusterWoker?.save(name: name, title: title, urlToImage: urlToImage, content: content)
     }
 }
