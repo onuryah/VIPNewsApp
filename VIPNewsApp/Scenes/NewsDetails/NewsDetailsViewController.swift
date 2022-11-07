@@ -73,24 +73,23 @@ class NewsDetailsViewController: UIViewController, NewsDetailsDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    getNews()
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
-  {
-    let request = NewsDetails.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-    func displayUI(viewModel: NewDetails.FetchPost.ViewModel)
+    private func getNews()
+    {
+        interactor?.getNews()
+    }
+    
+    func displayUI(viewModel: NewsDetails.FetchPost.ViewModel)
   {
       nameLabelField.text = viewModel.post.title
       newDescriptionLabelField.text = viewModel.post.content
       guard let imageString = viewModel.post.urlToImage else {return}
-      newImageImageView.sd_setImage(with: URL(string: imageString))
+      newsImageImageView.sd_setImage(with: URL(string: imageString))
   }
 }
