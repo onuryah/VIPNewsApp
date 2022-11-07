@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="-210" y="84"/>
         </scene>
-        <!--New Details View Controller-->
+        <!--News Details View Controller-->
         <scene sceneID="Hn5-Js-Tuz">
             <objects>
-                <viewController storyboardIdentifier="NewDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iep-yZ-NxW" customClass="NewDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iep-yZ-NxW" customClass="NewsDetailsViewController" customModule="VIPNewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahT-cK-COA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="50z-vf-dAe">
                                                 <rect key="frame" x="0.0" y="0.0" width="261" height="286.5"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-tW-Lsa" customClass="TopAlignedLabel" customModule="NewsApp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-tW-Lsa">
                                                 <rect key="frame" x="0.0" y="296.5" width="261" height="277"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -183,9 +183,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="qvH-HN-V0I"/>
                     <connections>
-                        <outlet property="nameLabelField" destination="hon-cB-7fe" id="ESq-Dc-BNA"/>
-                        <outlet property="newDescriptionLabelField" destination="4Wb-tW-Lsa" id="qu3-ls-ceZ"/>
-                        <outlet property="newImageImageView" destination="50z-vf-dAe" id="fDj-TN-OTI"/>
+                        <outlet property="nameLabelField" destination="hon-cB-7fe" id="uW8-vW-IQa"/>
+                        <outlet property="newDescriptionLabelField" destination="4Wb-tW-Lsa" id="7KG-Lb-0AB"/>
+                        <outlet property="newsImageImageView" destination="50z-vf-dAe" id="3n6-Ar-gN1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wv2-eW-3wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
