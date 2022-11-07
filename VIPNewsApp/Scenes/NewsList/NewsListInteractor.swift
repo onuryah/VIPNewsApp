@@ -14,28 +14,27 @@ import UIKit
 
 protocol NewsListBusinessLogic
 {
-  func doSomething(request: NewsList.Something.Request)
+    func fetchNews(request: News.FetchPost.Request)
 }
 
 protocol NewsListDataStore
 {
-  //var name: String { get set }
+    var new: [Article]? { get }
 }
 
 class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
 {
-  var presenter: NewsListPresentationLogic?
-  var worker: NewsListWorker?
-  //var name: String = ""
+    internal var new: [Article]?
+    var presenter: NewsListPresentationLogic?
+    var worker: NewsListWorker?
   
-  // MARK: Do something
-  
-  func doSomething(request: NewsList.Something.Request)
+    func fetchNews(request: News.FetchPost.Request)
   {
     worker = NewsListWorker()
-//    worker?.doSomeWork()
-    
-    let response = NewsList.Something.Response()
-    presenter?.presentSomething(response: response)
+      worker?.fetchNews(completionHandler: { [weak self] (data, error) in
+          self?.new = data
+          let response = News.FetchPost.Response(errorMessage: error?.localizedDescription, data: data)
+          self?.presenter?.presentFetchedNews(response: response)
+      })
   }
 }

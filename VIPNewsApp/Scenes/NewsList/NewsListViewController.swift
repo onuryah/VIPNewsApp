@@ -14,13 +14,14 @@ import UIKit
 
 protocol NewsListDisplayLogic: class
 {
-  func displaySomething(viewModel: NewsList.Something.ViewModel)
+    func displayFetchedNews(viewModel: News.FetchPost.ViewModel)
 }
 
 class NewsListViewController: UIViewController, NewsListDisplayLogic
 {
   var interactor: NewsListBusinessLogic?
   var router: (NSObjectProtocol & NewsListRoutingLogic & NewsListDataPassing)?
+    private var newData : [Article] = []
 
   // MARK: Object lifecycle
   
@@ -64,26 +65,23 @@ class NewsListViewController: UIViewController, NewsListDisplayLogic
     }
   }
   
-  // MARK: View lifecycle
-  
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+      getNewsList()
   }
   
-  // MARK: Do something
+
   
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = NewsList.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: NewsList.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+}
+extension NewsListViewController {
+    func displayFetchedNews(viewModel: News.FetchPost.ViewModel) {
+        self.newData = viewModel.post ?? [Article]()
+    }
+    
+    private func getNewsList()
+    {
+        let request = News.FetchPost.Request()
+        interactor?.fetchNews(request: request)
+    }
 }
