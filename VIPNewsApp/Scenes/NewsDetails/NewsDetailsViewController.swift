@@ -14,12 +14,16 @@ import UIKit
 
 protocol NewsDetailsDisplayLogic: class
 {
-  func displaySomething(viewModel: NewsDetails.Something.ViewModel)
+    func displayUI(viewModel: NewsDetails.FetchPost.ViewModel)
 }
 
 class NewsDetailsViewController: UIViewController, NewsDetailsDisplayLogic
 {
-  var interactor: NewsDetailsBusinessLogic?
+    @IBOutlet weak var nameLabelField: UILabel!
+    @IBOutlet weak var newsImageImageView: UIImageView!
+    @IBOutlet weak var newDescriptionLabelField: UILabel!
+    
+    var interactor: NewsDetailsBusinessLogic?
   var router: (NSObjectProtocol & NewsDetailsRoutingLogic & NewsDetailsDataPassing)?
 
   // MARK: Object lifecycle
@@ -82,8 +86,11 @@ class NewsDetailsViewController: UIViewController, NewsDetailsDisplayLogic
     interactor?.doSomething(request: request)
   }
   
-  func displaySomething(viewModel: NewsDetails.Something.ViewModel)
+    func displayUI(viewModel: NewDetails.FetchPost.ViewModel)
   {
-    //nameTextField.text = viewModel.name
+      nameLabelField.text = viewModel.post.title
+      newDescriptionLabelField.text = viewModel.post.content
+      guard let imageString = viewModel.post.urlToImage else {return}
+      newImageImageView.sd_setImage(with: URL(string: imageString))
   }
 }

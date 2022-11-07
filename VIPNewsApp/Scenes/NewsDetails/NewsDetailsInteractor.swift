@@ -14,29 +14,25 @@ import UIKit
 
 protocol NewsDetailsBusinessLogic
 {
-  func doSomething(request: NewsDetails.Something.Request)
+    func getNews()
 }
 
 protocol NewsDetailsDataStore
 {
-    var new: Article! { get set }
+    var news: Article! { get set }
 }
 
 class NewsDetailsInteractor: NewsDetailsBusinessLogic, NewsDetailsDataStore
 {
-    var new: Article!
+    var news: Article!
   var presenter: NewsDetailsPresentationLogic?
-  var worker: NewsDetailsWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: NewsDetails.Something.Request)
+  var worker: NewsDetailsWorker?  
+    func getNews()
   {
     worker = NewsDetailsWorker()
-    worker?.doSomeWork()
+      self.presenter?.presentNews(response: NewsDetails.FetchPost.Response(data: news))
     
-    let response = NewsDetails.Something.Response()
-    presenter?.presentSomething(response: response)
+//      let response = NewDetails.FetchPost.Response()
+//    presenter?.presentSomething(response: response)
   }
 }

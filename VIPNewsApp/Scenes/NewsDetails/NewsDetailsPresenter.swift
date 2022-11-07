@@ -14,18 +14,17 @@ import UIKit
 
 protocol NewsDetailsPresentationLogic
 {
-  func presentSomething(response: NewsDetails.Something.Response)
+    func presentNews(response: NewsDetails.FetchPost.Response)
 }
 
 class NewsDetailsPresenter: NewsDetailsPresentationLogic
 {
   weak var viewController: NewsDetailsDisplayLogic?
   
-  // MARK: Do something
-  
-  func presentSomething(response: NewsDetails.Something.Response)
+    func presentNews(response: NewsDetails.FetchPost.Response)
   {
-    let viewModel = NewsDetails.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+      let new = response.data
+      let viewModel = NewsDetails.FetchPost.ViewModel(post: new)
+      viewController?.displayUI(viewModel: viewModel)
   }
 }
