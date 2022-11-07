@@ -65,6 +65,7 @@ class NewsListViewController: UIViewController, NewsListDisplayLogic
     presenter.viewController = viewController
     router.viewController = viewController
     router.dataStore = interactor
+      createFavoritesButton()
   }
   
   override func viewDidLoad()
@@ -126,6 +127,9 @@ extension NewsListViewController {
 }
 
 extension NewsListViewController {
+    func createFavoritesButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Favorites", style: UIBarButtonItem.Style.plain, target: self, action: #selector(favoritesButtonClicked))
+    }
     @objc private func favoritesButtonClicked() {
         self.router?.routeToFavorites(segue: nil)
     }
