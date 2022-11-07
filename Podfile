@@ -9,6 +9,7 @@ target 'VIPNewsApp' do
 
     pod 'Alamofire'
     pod 'RxCocoa'
+    pod 'SDWebImage'
 
   target 'VIPNewsAppTests' do
     inherit! :search_paths
