@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84BF31E1291924900055FC85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E0291924900055FC85 /* AppDelegate.swift */; };
+		84BF31E3291924900055FC85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E2291924900055FC85 /* SceneDelegate.swift */; };
+		84BF31E5291924900055FC85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E4291924900055FC85 /* ViewController.swift */; };
+		84BF31E8291924900055FC85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BF31E6291924900055FC85 /* Main.storyboard */; };
+		84BF31EB291924900055FC85 /* VIPNewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E9291924900055FC85 /* VIPNewsApp.xcdatamodeld */; };
+		84BF31ED291924920055FC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BF31EC291924920055FC85 /* Assets.xcassets */; };
+		84BF31F0291924920055FC85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BF31EE291924920055FC85 /* LaunchScreen.storyboard */; };
+		84BF31FB291924930055FC85 /* VIPNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31FA291924930055FC85 /* VIPNewsAppTests.swift */; };
+		84BF3205291924930055FC85 /* VIPNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3204291924930055FC85 /* VIPNewsAppUITests.swift */; };
+		84BF3207291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3206291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84BF31F7291924930055FC85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84BF31D5291924900055FC85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84BF31DC291924900055FC85;
+			remoteInfo = VIPNewsApp;
+		};
+		84BF3201291924930055FC85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84BF31D5291924900055FC85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84BF31DC291924900055FC85;
+			remoteInfo = VIPNewsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84BF31DD291924900055FC85 /* VIPNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BF31E0291924900055FC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84BF31E2291924900055FC85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84BF31E4291924900055FC85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84BF31E7291924900055FC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84BF31EA291924900055FC85 /* VIPNewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VIPNewsApp.xcdatamodel; sourceTree = "<group>"; };
+		84BF31EC291924920055FC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84BF31EF291924920055FC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84BF31F1291924920055FC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84BF31F6291924930055FC85 /* VIPNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BF31FA291924930055FC85 /* VIPNewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPNewsAppTests.swift; sourceTree = "<group>"; };
+		84BF3200291924930055FC85 /* VIPNewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPNewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BF3204291924930055FC85 /* VIPNewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPNewsAppUITests.swift; sourceTree = "<group>"; };
+		84BF3206291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPNewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84BF31DA291924900055FC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BF31F3291924930055FC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BF31FD291924930055FC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84BF31D4291924900055FC85 = {
+			isa = PBXGroup;
+			children = (
+				84BF31DF291924900055FC85 /* VIPNewsApp */,
+				84BF31F9291924930055FC85 /* VIPNewsAppTests */,
+				84BF3203291924930055FC85 /* VIPNewsAppUITests */,
+				84BF31DE291924900055FC85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84BF31DE291924900055FC85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84BF31DD291924900055FC85 /* VIPNewsApp.app */,
+				84BF31F6291924930055FC85 /* VIPNewsAppTests.xctest */,
+				84BF3200291924930055FC85 /* VIPNewsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84BF31DF291924900055FC85 /* VIPNewsApp */ = {
+			isa = PBXGroup;
+			children = (
+				84BF31E0291924900055FC85 /* AppDelegate.swift */,
+				84BF31E2291924900055FC85 /* SceneDelegate.swift */,
+				84BF31E4291924900055FC85 /* ViewController.swift */,
+				84BF31E6291924900055FC85 /* Main.storyboard */,
+				84BF31EC291924920055FC85 /* Assets.xcassets */,
+				84BF31EE291924920055FC85 /* LaunchScreen.storyboard */,
+				84BF31F1291924920055FC85 /* Info.plist */,
+				84BF31E9291924900055FC85 /* VIPNewsApp.xcdatamodeld */,
+			);
+			path = VIPNewsApp;
+			sourceTree = "<group>";
+		};
+		84BF31F9291924930055FC85 /* VIPNewsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				84BF31FA291924930055FC85 /* VIPNewsAppTests.swift */,
+			);
+			path = VIPNewsAppTests;
+			sourceTree = "<group>";
+		};
+		84BF3203291924930055FC85 /* VIPNewsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84BF3204291924930055FC85 /* VIPNewsAppUITests.swift */,
+				84BF3206291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift */,
+			);
+			path = VIPNewsAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84BF31DC291924900055FC85 /* VIPNewsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84BF320A291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsApp" */;
+			buildPhases = (
+				84BF31D9291924900055FC85 /* Sources */,
+				84BF31DA291924900055FC85 /* Frameworks */,
+				84BF31DB291924900055FC85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VIPNewsApp;
+			productName = VIPNewsApp;
+			productReference = 84BF31DD291924900055FC85 /* VIPNewsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84BF31F5291924930055FC85 /* VIPNewsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84BF320D291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsAppTests" */;
+			buildPhases = (
+				84BF31F2291924930055FC85 /* Sources */,
+				84BF31F3291924930055FC85 /* Frameworks */,
+				84BF31F4291924930055FC85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84BF31F8291924930055FC85 /* PBXTargetDependency */,
+			);
+			name = VIPNewsAppTests;
+			productName = VIPNewsAppTests;
+			productReference = 84BF31F6291924930055FC85 /* VIPNewsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84BF31FF291924930055FC85 /* VIPNewsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84BF3210291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsAppUITests" */;
+			buildPhases = (
+				84BF31FC291924930055FC85 /* Sources */,
+				84BF31FD291924930055FC85 /* Frameworks */,
+				84BF31FE291924930055FC85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84BF3202291924930055FC85 /* PBXTargetDependency */,
+			);
+			name = VIPNewsAppUITests;
+			productName = VIPNewsAppUITests;
+			productReference = 84BF3200291924930055FC85 /* VIPNewsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84BF31D5291924900055FC85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					84BF31DC291924900055FC85 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					84BF31F5291924930055FC85 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 84BF31DC291924900055FC85;
+					};
+					84BF31FF291924930055FC85 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 84BF31DC291924900055FC85;
+					};
+				};
+			};
+			buildConfigurationList = 84BF31D8291924900055FC85 /* Build configuration list for PBXProject "VIPNewsApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84BF31D4291924900055FC85;
+			productRefGroup = 84BF31DE291924900055FC85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84BF31DC291924900055FC85 /* VIPNewsApp */,
+				84BF31F5291924930055FC85 /* VIPNewsAppTests */,
+				84BF31FF291924930055FC85 /* VIPNewsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84BF31DB291924900055FC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF31F0291924920055FC85 /* LaunchScreen.storyboard in Resources */,
+				84BF31ED291924920055FC85 /* Assets.xcassets in Resources */,
+				84BF31E8291924900055FC85 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BF31F4291924930055FC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BF31FE291924930055FC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84BF31D9291924900055FC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF31EB291924900055FC85 /* VIPNewsApp.xcdatamodeld in Sources */,
+				84BF31E5291924900055FC85 /* ViewController.swift in Sources */,
+				84BF31E1291924900055FC85 /* AppDelegate.swift in Sources */,
+				84BF31E3291924900055FC85 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BF31F2291924930055FC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF31FB291924930055FC85 /* VIPNewsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84BF31FC291924930055FC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84BF3205291924930055FC85 /* VIPNewsAppUITests.swift in Sources */,
+				84BF3207291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84BF31F8291924930055FC85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84BF31DC291924900055FC85 /* VIPNewsApp */;
+			targetProxy = 84BF31F7291924930055FC85 /* PBXContainerItemProxy */;
+		};
+		84BF3202291924930055FC85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84BF31DC291924900055FC85 /* VIPNewsApp */;
+			targetProxy = 84BF3201291924930055FC85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84BF31E6291924900055FC85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84BF31E7291924900055FC85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84BF31EE291924920055FC85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84BF31EF291924920055FC85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84BF3208291924930055FC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84BF3209291924930055FC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84BF320B291924930055FC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MGN74RQ4HR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VIPNewsApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onuralp.VIPNewsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84BF320C291924930055FC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MGN74RQ4HR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VIPNewsApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onuralp.VIPNewsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84BF320E291924930055FC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MGN74RQ4HR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onuralp.VIPNewsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIPNewsApp.app/VIPNewsApp";
+			};
+			name = Debug;
+		};
+		84BF320F291924930055FC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MGN74RQ4HR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onuralp.VIPNewsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VIPNewsApp.app/VIPNewsApp";
+			};
+			name = Release;
+		};
+		84BF3211291924930055FC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MGN74RQ4HR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onuralp.VIPNewsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VIPNewsApp;
+			};
+			name = Debug;
+		};
+		84BF3212291924930055FC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MGN74RQ4HR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onuralp.VIPNewsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VIPNewsApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84BF31D8291924900055FC85 /* Build configuration list for PBXProject "VIPNewsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BF3208291924930055FC85 /* Debug */,
+				84BF3209291924930055FC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84BF320A291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BF320B291924930055FC85 /* Debug */,
+				84BF320C291924930055FC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84BF320D291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BF320E291924930055FC85 /* Debug */,
+				84BF320F291924930055FC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84BF3210291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84BF3211291924930055FC85 /* Debug */,
+				84BF3212291924930055FC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84BF31E9291924900055FC85 /* VIPNewsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84BF31EA291924900055FC85 /* VIPNewsApp.xcdatamodel */,
+			);
+			currentVersion = 84BF31EA291924900055FC85 /* VIPNewsApp.xcdatamodel */;
+			path = VIPNewsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84BF31D5291924900055FC85 /* Project object */;
+}
