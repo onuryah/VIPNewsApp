@@ -87,6 +87,11 @@ extension NewsListViewController {
         savedArray.removeAll(keepingCapacity: false)
         savedArray = viewModel.post ?? []
     }
+    
+    private func getSavedList() {
+        let savedRequest = News.FetchManagedPost.Request()
+        interactor?.getFavoritedNews(request: savedRequest)
+    }
 }
 
 extension NewsListViewController {
