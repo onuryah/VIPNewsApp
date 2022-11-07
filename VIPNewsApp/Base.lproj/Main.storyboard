@@ -86,10 +86,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="heartImageView" destination="9sA-T5-pLs" id="wGs-2q-liw"/>
-                                            <outlet property="likeButton" destination="3xk-fx-INy" id="xDf-1E-PcE"/>
-                                            <outlet property="newImageView" destination="OOb-XH-8FA" id="6jP-wN-lLD"/>
+                                            <outlet property="heartImageView" destination="9sA-T5-pLs" id="ncq-Hf-qOa"/>
+                                            <outlet property="likeButton" destination="3xk-fx-INy" id="dbK-As-Wi9"/>
+                                            <outlet property="newImageView" destination="OOb-XH-8FA" id="chb-MI-mGs"/>
                                             <outlet property="newLabelField" destination="IYa-k2-WjR" id="M6h-5h-sdh"/>
+                                            <outlet property="newsLabelField" destination="IYa-k2-WjR" id="sP9-QJ-wyX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -105,10 +106,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="quj-wE-Ngg"/>
-                    <connections>
-                        <outlet property="activityIndicatorView" destination="eYn-ET-4aO" id="FSB-bn-MJa"/>
-                        <outlet property="tableView" destination="7Fl-a7-6Gj" id="1Yf-qT-iLj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJj-z6-3uC" sceneMemberID="firstResponder"/>
             </objects>
