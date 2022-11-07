@@ -96,4 +96,9 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
         newData.removeAll(keepingCapacity: false)
         newData = viewModel.post ?? []
     }
+    
+    private func getSavedList() {
+        let savedRequest = FavoritedNews.FetchManagedPost.Request()
+        interactor?.fetchFavoritedNews(request: savedRequest)
+    }
 }
