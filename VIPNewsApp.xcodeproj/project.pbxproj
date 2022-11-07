@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB6EE8D2986F4473F7CECEA /* Pods_VIPNewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62C6CA5945E0EA78476E69E /* Pods_VIPNewsApp.framework */; };
+		2707BC62C29435C4D5754100 /* Pods_VIPNewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD462C33F43186ED78C020DF /* Pods_VIPNewsAppTests.framework */; };
 		84BF31E1291924900055FC85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E0291924900055FC85 /* AppDelegate.swift */; };
 		84BF31E3291924900055FC85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E2291924900055FC85 /* SceneDelegate.swift */; };
 		84BF31E5291924900055FC85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31E4291924900055FC85 /* ViewController.swift */; };
@@ -17,6 +19,7 @@
 		84BF31FB291924930055FC85 /* VIPNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF31FA291924930055FC85 /* VIPNewsAppTests.swift */; };
 		84BF3205291924930055FC85 /* VIPNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3204291924930055FC85 /* VIPNewsAppUITests.swift */; };
 		84BF3207291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3206291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift */; };
+		A54F8D96BCE30A7BA1D8C324 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECFA0C64203E6441BFB6B3 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47A8B3F2881A5726F4806670 /* Pods-VIPNewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsAppTests.release.xcconfig"; path = "Target Support Files/Pods-VIPNewsAppTests/Pods-VIPNewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		84BF31DD291924900055FC85 /* VIPNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BF31E0291924900055FC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BF31E2291924900055FC85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 		84BF3200291924930055FC85 /* VIPNewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPNewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BF3204291924930055FC85 /* VIPNewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPNewsAppUITests.swift; sourceTree = "<group>"; };
 		84BF3206291924930055FC85 /* VIPNewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPNewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A24697BDD43928D538F76DC9 /* Pods-VIPNewsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPNewsAppTests/Pods-VIPNewsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5ECFA0C64203E6441BFB6B3 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPNewsApp_VIPNewsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C194CADB17775856A7986AF3 /* Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-VIPNewsApp-VIPNewsAppUITests/Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C35D7058041EF4EF0B4416D3 /* Pods-VIPNewsApp-VIPNewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsApp-VIPNewsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPNewsApp-VIPNewsAppUITests/Pods-VIPNewsApp-VIPNewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C62C6CA5945E0EA78476E69E /* Pods_VIPNewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPNewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD462C33F43186ED78C020DF /* Pods_VIPNewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPNewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC49F2994A566555CC865979 /* Pods-VIPNewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsApp.release.xcconfig"; path = "Target Support Files/Pods-VIPNewsApp/Pods-VIPNewsApp.release.xcconfig"; sourceTree = "<group>"; };
+		FF13710220E535DCF7C520C1 /* Pods-VIPNewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsApp.debug.xcconfig"; path = "Target Support Files/Pods-VIPNewsApp/Pods-VIPNewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB6EE8D2986F4473F7CECEA /* Pods_VIPNewsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2707BC62C29435C4D5754100 /* Pods_VIPNewsAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54F8D96BCE30A7BA1D8C324 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3362303136ACA56CF75D0AE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C62C6CA5945E0EA78476E69E /* Pods_VIPNewsApp.framework */,
+				A5ECFA0C64203E6441BFB6B3 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework */,
+				DD462C33F43186ED78C020DF /* Pods_VIPNewsAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84BF31D4291924900055FC85 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				84BF31F9291924930055FC85 /* VIPNewsAppTests */,
 				84BF3203291924930055FC85 /* VIPNewsAppUITests */,
 				84BF31DE291924900055FC85 /* Products */,
+				CC038C7AB19059BF3F7A8280 /* Pods */,
+				3362303136ACA56CF75D0AE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +157,20 @@
 			path = VIPNewsAppUITests;
 			sourceTree = "<group>";
 		};
+		CC038C7AB19059BF3F7A8280 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF13710220E535DCF7C520C1 /* Pods-VIPNewsApp.debug.xcconfig */,
+				EC49F2994A566555CC865979 /* Pods-VIPNewsApp.release.xcconfig */,
+				C35D7058041EF4EF0B4416D3 /* Pods-VIPNewsApp-VIPNewsAppUITests.debug.xcconfig */,
+				C194CADB17775856A7986AF3 /* Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig */,
+				A24697BDD43928D538F76DC9 /* Pods-VIPNewsAppTests.debug.xcconfig */,
+				47A8B3F2881A5726F4806670 /* Pods-VIPNewsAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BF320A291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsApp" */;
 			buildPhases = (
+				BBB66B7AEDD78982BA8019C4 /* [CP] Check Pods Manifest.lock */,
 				84BF31D9291924900055FC85 /* Sources */,
 				84BF31DA291924900055FC85 /* Frameworks */,
 				84BF31DB291924900055FC85 /* Resources */,
+				B5C9A69FC486D14A28C19111 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BF320D291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsAppTests" */;
 			buildPhases = (
+				99648752830A9CF143F73BE5 /* [CP] Check Pods Manifest.lock */,
 				84BF31F2291924930055FC85 /* Sources */,
 				84BF31F3291924930055FC85 /* Frameworks */,
 				84BF31F4291924930055FC85 /* Resources */,
@@ -172,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BF3210291924930055FC85 /* Build configuration list for PBXNativeTarget "VIPNewsAppUITests" */;
 			buildPhases = (
+				4F0C8114F08256AF66C73B3A /* [CP] Check Pods Manifest.lock */,
 				84BF31FC291924930055FC85 /* Sources */,
 				84BF31FD291924930055FC85 /* Frameworks */,
 				84BF31FE291924930055FC85 /* Resources */,
+				63691657D96E0E2901E051D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +301,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F0C8114F08256AF66C73B3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPNewsApp-VIPNewsAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63691657D96E0E2901E051D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPNewsApp-VIPNewsAppUITests/Pods-VIPNewsApp-VIPNewsAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPNewsApp-VIPNewsAppUITests/Pods-VIPNewsApp-VIPNewsAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPNewsApp-VIPNewsAppUITests/Pods-VIPNewsApp-VIPNewsAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99648752830A9CF143F73BE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPNewsAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5C9A69FC486D14A28C19111 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPNewsApp/Pods-VIPNewsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPNewsApp/Pods-VIPNewsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPNewsApp/Pods-VIPNewsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBB66B7AEDD78982BA8019C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPNewsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84BF31D9291924900055FC85 /* Sources */ = {
@@ -436,6 +585,7 @@
 		};
 		84BF320B291924930055FC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF13710220E535DCF7C520C1 /* Pods-VIPNewsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +614,7 @@
 		};
 		84BF320C291924930055FC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC49F2994A566555CC865979 /* Pods-VIPNewsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,6 +643,7 @@
 		};
 		84BF320E291924930055FC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24697BDD43928D538F76DC9 /* Pods-VIPNewsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +664,7 @@
 		};
 		84BF320F291924930055FC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47A8B3F2881A5726F4806670 /* Pods-VIPNewsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +685,7 @@
 		};
 		84BF3211291924930055FC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35D7058041EF4EF0B4416D3 /* Pods-VIPNewsApp-VIPNewsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +704,7 @@
 		};
 		84BF3212291924930055FC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C194CADB17775856A7986AF3 /* Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
