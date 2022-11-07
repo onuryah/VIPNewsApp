@@ -256,6 +256,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="koa-zM-UEB" secondAttribute="bottom" constant="16" id="qtd-xn-PZt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoritedNewsImageView" destination="J6E-4d-cA0" id="paX-j9-SGl"/>
+                                            <outlet property="favoritedNewsLabelField" destination="1q5-rW-hTG" id="hcb-li-mft"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

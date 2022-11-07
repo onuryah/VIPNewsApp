@@ -8,6 +8,8 @@
 import UIKit
 
 class FavoritesCell: UITableViewCell {
-
+    @IBOutlet weak var favoritedNewsImageView: UIImageView!
+    @IBOutlet weak var favoritedNewsLabelField: UILabel!
+    
 
 }
