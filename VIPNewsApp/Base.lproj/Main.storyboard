@@ -210,6 +210,92 @@
             </objects>
             <point key="canvasLocation" x="1970" y="84"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="ykC-Gr-o2P">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="41f-b2-OnU" customClass="FavoritesViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="apW-Nm-Nlp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ydj-m6-SUj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritesCell" rowHeight="178" id="jtT-Yn-FDe" customClass="FavoritesCell" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="178"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jtT-Yn-FDe" id="Gec-b0-A9z">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="koa-zM-UEB">
+                                                    <rect key="frame" x="16" y="16" width="382" height="146"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-4d-cA0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="146"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="130" id="4ee-Gt-rwm"/>
+                                                                <constraint firstAttribute="width" secondItem="J6E-4d-cA0" secondAttribute="height" multiplier="1:1" id="XWY-na-Emp"/>
+                                                                <constraint firstAttribute="height" constant="130" id="wEg-80-Z4k"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-rW-hTG">
+                                                            <rect key="frame" x="138" y="0.0" width="244" height="146"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                            <color key="textColor" name="label_color"/>
+                                                            <color key="highlightedColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="koa-zM-UEB" secondAttribute="trailing" constant="16" id="PPP-vO-bTF"/>
+                                                <constraint firstItem="koa-zM-UEB" firstAttribute="top" secondItem="Gec-b0-A9z" secondAttribute="top" constant="16" id="XZf-4z-RcI"/>
+                                                <constraint firstItem="koa-zM-UEB" firstAttribute="leading" secondItem="Gec-b0-A9z" secondAttribute="leading" constant="16" id="nnu-9F-FK3"/>
+                                                <constraint firstAttribute="bottom" secondItem="koa-zM-UEB" secondAttribute="bottom" constant="16" id="qtd-xn-PZt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i5t-rf-2uF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ydj-m6-SUj" firstAttribute="top" secondItem="i5t-rf-2uF" secondAttribute="top" id="QnR-Nv-JFM"/>
+                            <constraint firstItem="Ydj-m6-SUj" firstAttribute="leading" secondItem="i5t-rf-2uF" secondAttribute="leading" id="TyK-AA-WEF"/>
+                            <constraint firstItem="i5t-rf-2uF" firstAttribute="bottom" secondItem="Ydj-m6-SUj" secondAttribute="bottom" id="Vu5-rT-6x6"/>
+                            <constraint firstItem="i5t-rf-2uF" firstAttribute="trailing" secondItem="Ydj-m6-SUj" secondAttribute="trailing" id="bio-ZI-ay1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="Y2h-rZ-29g"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="Ydj-m6-SUj" id="FK2-YH-rc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hN-sE-liR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="-624"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cxU-uA-c6o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="McA-cA-UKs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iIJ-RL-65n">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="41f-b2-OnU" kind="relationship" relationship="rootViewController" id="W5K-gZ-Hqy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gc3-xo-fHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="-624"/>
+        </scene>
     </scenes>
     <resources>
         <image name="unliked_img" width="999" height="930"/>
