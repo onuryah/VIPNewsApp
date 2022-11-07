@@ -88,8 +88,8 @@
                                         <connections>
                                             <outlet property="heartImageView" destination="9sA-T5-pLs" id="ncq-Hf-qOa"/>
                                             <outlet property="likeButton" destination="3xk-fx-INy" id="dbK-As-Wi9"/>
-                                            <outlet property="newImageView" destination="OOb-XH-8FA" id="chb-MI-mGs"/>
                                             <outlet property="newLabelField" destination="IYa-k2-WjR" id="M6h-5h-sdh"/>
+                                            <outlet property="newsImageView" destination="OOb-XH-8FA" id="chb-MI-mGs"/>
                                             <outlet property="newsLabelField" destination="IYa-k2-WjR" id="sP9-QJ-wyX"/>
                                         </connections>
                                     </tableViewCell>
