@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol NewsListRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToNewDetails(segue: UIStoryboardSegue?)
 }
 
 protocol NewsListDataPassing
@@ -27,34 +27,28 @@ class NewsListRouter: NSObject, NewsListRoutingLogic, NewsListDataPassing
   weak var viewController: NewsListViewController?
   var dataStore: NewsListDataStore?
   
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: NewsListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: NewsListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    func routeToNewDetails(segue: UIStoryboardSegue?)
+    {
+      if let segue = segue {
+        let destinationVC = segue.destination as! NewsDetailsViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToNewDetails(source: dataStore!, destination: &destinationDS)
+      } else {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          var destinationVC = storyboard.instantiateViewController(withIdentifier: "NewDetailsViewController") as! NewsDetailsViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToNewDetails(source: dataStore!, destination: &destinationDS)
+          navigateToNewDetails(source: viewController!, destination: &destinationVC)
+      }
+    }
+    
+    func navigateToNewDetails( source : NewsListViewController, destination: inout NewsDetailsViewController) {
+        source.show(destination, sender: nil)
+    }
+    
+    private func passDataToNewDetails(source: NewsListDataStore, destination: inout NewsDetailsDataStore)
+  {
+      let selected = viewController?.tableView.indexPathForSelectedRow?.row
+      destination.new = source.new?[selected!]
+  }
 }

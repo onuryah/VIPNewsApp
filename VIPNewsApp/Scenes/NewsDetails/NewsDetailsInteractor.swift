@@ -19,11 +19,12 @@ protocol NewsDetailsBusinessLogic
 
 protocol NewsDetailsDataStore
 {
-  //var name: String { get set }
+    var new: Article! { get set }
 }
 
 class NewsDetailsInteractor: NewsDetailsBusinessLogic, NewsDetailsDataStore
 {
+    var new: Article!
   var presenter: NewsDetailsPresentationLogic?
   var worker: NewsDetailsWorker?
   //var name: String = ""
