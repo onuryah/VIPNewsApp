@@ -107,6 +107,7 @@ extension NewsListViewController {
             .rx // 1
             .modelSelected(Article.self) // 2
             .subscribe(onNext: { [weak self] new in // 3
+                self!.router?.routeToNewDetails(segue: nil)
                 
                 if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow { // 5
                     self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
