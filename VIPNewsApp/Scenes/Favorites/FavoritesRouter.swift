@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol FavoritesRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToDetails(segue: UIStoryboardSegue?)
 }
 
 protocol FavoritesDataPassing
@@ -27,34 +27,33 @@ class FavoritesRouter: NSObject, FavoritesRoutingLogic, FavoritesDataPassing
   weak var viewController: FavoritesViewController?
   var dataStore: FavoritesDataStore?
   
-  // MARK: Routing
+    func routeToDetails(segue: UIStoryboardSegue?)
+    {
+      if let segue = segue {
+        let destinationVC = segue.destination as! NewsDetailsViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToNewDetails(source: dataStore!, destination: &destinationDS)
+      } else {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let destinationVC = storyboard.instantiateViewController(withIdentifier: "NewDetailsViewController") as! NewsDetailsViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        passDataToNewDetails(source: dataStore!, destination: &destinationDS)
+          navigateToDetails(source: viewController!, destination: destinationVC)
+      }
+    }
+    
+    private func navigateToDetails(source: FavoritesViewController, destination: NewsDetailsViewController)
+  {
+    source.show(destination, sender: nil)
+  }
+    
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    private func passDataToNewDetails(source: FavoritesDataStore, destination: inout NewsDetailsDataStore)
+  {
+      let selected = viewController?.favoritesTableView.indexPathForSelectedRow?.row
+      let selectedFavoritedNew = source.favoritedNews![selected!]
+      let willPassingData = Article(source: Source(name: selectedFavoritedNew.source.name), title: selectedFavoritedNew.title, urlToImage: selectedFavoritedNew.urlToImage, content: selectedFavoritedNew.content)
+      destination.news = willPassingData
+  }
 
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: FavoritesViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: FavoritesDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
 }
