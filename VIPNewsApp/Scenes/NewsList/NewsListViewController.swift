@@ -148,6 +148,9 @@ extension NewsListViewController {
         let cell = self.tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! NewsCell
         self.tappedSettings(indexPath: indexPath, cell: cell)
         self.tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+            self.interactor?.stopActivityIndicator(viewForActivityIndicator: self.viewForActivityIndicator, activityIndicatorView: self.activityIndicatorView)
+        }
     }
     
     private func tappedSettings(indexPath : IndexPath, cell: NewsCell){
