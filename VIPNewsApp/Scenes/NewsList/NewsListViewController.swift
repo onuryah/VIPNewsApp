@@ -124,7 +124,7 @@ extension NewsListViewController {
 
 extension NewsListViewController {
     @objc private func favoritesButtonClicked() {
-//        self.router?.routeToFavorites(segue: nil)
+        self.router?.routeToFavorites(segue: nil)
     }
     
     private func itemsInCell(cell: NewsCell, row: Int){
@@ -154,6 +154,7 @@ extension NewsListViewController {
         let urlToImage = self.newData[indexPath.row].urlToImage
         if cell.heartImageView.image == UIImage(named: "unliked_img"){
             saveFavoritedNews(name: name, title: title, urlToImage: urlToImage, content: content)
+            sendNewsTitleToFirebase(title: title)
         }else if cell.heartImageView.image == UIImage(named: "liked_img"){
             for i in self.savedArray{
                 if title == i.title{
