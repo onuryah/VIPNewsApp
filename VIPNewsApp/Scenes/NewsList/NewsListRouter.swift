@@ -15,6 +15,7 @@ import UIKit
 @objc protocol NewsListRoutingLogic
 {
     func routeToNewDetails(segue: UIStoryboardSegue?)
+    func routeToFavorites(segue: UIStoryboardSegue?)
 }
 
 protocol NewsListDataPassing
@@ -50,5 +51,22 @@ class NewsListRouter: NSObject, NewsListRoutingLogic, NewsListDataPassing
   {
       let selected = viewController?.tableView.indexPathForSelectedRow?.row
       destination.news = source.new?[selected!]
+  }
+    
+    func routeToFavorites(segue: UIStoryboardSegue?) {
+        if let segue = segue {
+          let destinationVC = segue.destination as! NewsDetailsViewController
+          var destinationDS = destinationVC.router!.dataStore!
+          passDataToNewDetails(source: dataStore!, destination: &destinationDS)
+        } else {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "FavoritesViewController") as! FavoritesViewController
+            navigateToFavorites(source: viewController!, destination: destinationVC)
+        }
+    }
+    
+    private func navigateToFavorites(source: NewsListViewController, destination: FavoritesViewController)
+  {
+    source.show(destination, sender: nil)
   }
 }
