@@ -106,7 +106,9 @@ extension NewsListViewController {
                 .rx // 2
                 .items(cellIdentifier: "newCell", cellType: NewsCell.self)) { row, element, cell in // 3
                     cell.configureWithNew(withNew: element)
+                    self.getSavedList()
                     self.itemsInCell(cell: cell, row: row)
+
                 }
                 .disposed(by: disposeBag) // 5
     }
@@ -163,9 +165,10 @@ extension NewsListViewController {
         let content = self.newData[indexPath.row].content
         let urlToImage = self.newData[indexPath.row].urlToImage
         if cell.heartImageView.image == UIImage(named: "unliked_img"){
-            startIndicator()
             saveFavoritedNews(name: name, title: title, urlToImage: urlToImage, content: content)
             sendNewsTitleToFirebase(title: title)
+            getSavedList()
+            startIndicator()
         }else if cell.heartImageView.image == UIImage(named: "liked_img"){
             for i in self.savedArray{
                 if title == i.title{
