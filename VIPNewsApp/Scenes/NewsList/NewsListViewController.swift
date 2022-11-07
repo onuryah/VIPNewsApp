@@ -120,7 +120,6 @@ extension NewsListViewController {
             })
             .disposed(by: disposeBag) // 6    }
     }
-
 }
 
 
