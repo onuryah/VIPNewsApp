@@ -105,3 +105,30 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
         interactor?.fetchFavoritedNews(request: savedRequest)
     }
 }
+
+extension FavoritesViewController {
+    private func setupCellConfiguration() {
+      //1
+        news
+            .bind(to: favoritesTableView
+              .rx // 2
+              .items(cellIdentifier: "favoritesCell", cellType: FavoritesCell.self)) { row, element, cell in // 3
+                  cell.configureWithNew(withNew: element)
+              }
+              .disposed(by: disposeBag) // 5
+        }
+    
+    private func setupCellTapHandling() {
+        favoritesTableView
+          .rx // 1
+          .modelSelected(Article.self) // 2
+          .subscribe(onNext: { [weak self] new in // 3
+
+            if let selectedRowIndexPath = self?.favoritesTableView.indexPathForSelectedRow { // 5
+                self?.favoritesTableView.deselectRow(at: selectedRowIndexPath, animated: true)
+            }
+          })
+          .disposed(by: disposeBag) // 6
+    }
+
+}
