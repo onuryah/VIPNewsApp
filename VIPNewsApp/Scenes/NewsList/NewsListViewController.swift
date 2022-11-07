@@ -139,7 +139,6 @@ extension NewsListViewController {
     private func itemsInCell(cell: NewsCell, row: Int){
         cell.likeButton.tag = row
         cell.likeButton.addTarget(self, action: #selector(self.tapped), for: .touchUpInside)
-        self.getSavedList()
         
         cell.heartImageView.image = UIImage(named: "unliked_img")
         self.savedArray.forEach { saved in
