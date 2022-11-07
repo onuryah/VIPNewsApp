@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJj-z6-3uC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="907" y="84"/>
+            <point key="canvasLocation" x="768" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dr1-Yn-nwr">
@@ -131,6 +131,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA6-hN-Nec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-210" y="84"/>
+        </scene>
+        <!--New Details View Controller-->
+        <scene sceneID="Hn5-Js-Tuz">
+            <objects>
+                <viewController storyboardIdentifier="NewDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iep-yZ-NxW" customClass="NewDetailsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahT-cK-COA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-9G-ClS">
+                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hon-cB-7fe">
+                                        <rect key="frame" x="170" y="0.0" width="42.5" height="148.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" name="label_color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="29P-sX-7cE">
+                                        <rect key="frame" x="60.5" y="168.5" width="261" height="573.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="50z-vf-dAe">
+                                                <rect key="frame" x="0.0" y="0.0" width="261" height="286.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-tW-Lsa" customClass="TopAlignedLabel" customModule="NewsApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="296.5" width="261" height="277"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="50z-vf-dAe" firstAttribute="height" secondItem="29P-sX-7cE" secondAttribute="height" multiplier="0.5" id="Unz-WL-V5n"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hon-cB-7fe" firstAttribute="height" secondItem="6z4-9G-ClS" secondAttribute="height" multiplier="0.2" id="LEX-Wm-tXx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1lq-2R-Y90"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1lq-2R-Y90" firstAttribute="trailing" secondItem="6z4-9G-ClS" secondAttribute="trailing" constant="16" id="0ll-1b-h6Q"/>
+                            <constraint firstItem="6z4-9G-ClS" firstAttribute="top" secondItem="1lq-2R-Y90" secondAttribute="top" constant="16" id="5mL-NE-h3Q"/>
+                            <constraint firstItem="1lq-2R-Y90" firstAttribute="bottom" secondItem="6z4-9G-ClS" secondAttribute="bottom" constant="16" id="ncn-Mu-aJm"/>
+                            <constraint firstItem="6z4-9G-ClS" firstAttribute="leading" secondItem="ahT-cK-COA" secondAttribute="leading" constant="16" id="tWO-9v-gDF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qvH-HN-V0I"/>
+                    <connections>
+                        <outlet property="nameLabelField" destination="hon-cB-7fe" id="ESq-Dc-BNA"/>
+                        <outlet property="newDescriptionLabelField" destination="4Wb-tW-Lsa" id="qu3-ls-ceZ"/>
+                        <outlet property="newImageImageView" destination="50z-vf-dAe" id="fDj-TN-OTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wv2-eW-3wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2968" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FDb-V2-9lJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SR4-t9-QuG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oAI-QI-j9O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iep-yZ-NxW" kind="relationship" relationship="rootViewController" id="HY3-fQ-cFK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0H-tc-FPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="84"/>
         </scene>
     </scenes>
     <resources>
