@@ -11,6 +11,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 protocol FavoritesDisplayLogic: class
 {
@@ -20,7 +22,13 @@ protocol FavoritesDisplayLogic: class
 
 class FavoritesViewController: UIViewController, FavoritesDisplayLogic
 {
-    private  var newData : [Article] = []
+    private lazy var news : Observable<[Article]> = Observable.just(newData)
+    private  var newData : [Article] = [] {
+        didSet {
+            setupCellConfiguration()
+        }
+    }
+    private let disposeBag = DisposeBag()
   var interactor: FavoritesBusinessLogic?
   var router: (NSObjectProtocol & FavoritesRoutingLogic & FavoritesDataPassing)?
 
