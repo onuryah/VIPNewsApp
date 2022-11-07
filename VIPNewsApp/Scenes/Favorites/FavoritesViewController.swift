@@ -14,11 +14,13 @@ import UIKit
 
 protocol FavoritesDisplayLogic: class
 {
-  func displaySomething(viewModel: Favorites.Something.ViewModel)
+    func displayUI(viewModel: FavoritedNews.FetchPost.ViewModel)
+    func displayFetchedManagedNews(viewModel: FavoritedNews.FetchManagedPost.ViewModel)
 }
 
 class FavoritesViewController: UIViewController, FavoritesDisplayLogic
 {
+    private  var newData : [Article] = []
   var interactor: FavoritesBusinessLogic?
   var router: (NSObjectProtocol & FavoritesRoutingLogic & FavoritesDataPassing)?
 
@@ -69,21 +71,21 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
-  {
-    let request = Favorites.Something.Request()
-    interactor?.doSomething(request: request)
-  }
+
   
-  func displaySomething(viewModel: Favorites.Something.ViewModel)
+    func displayUI(viewModel: FavoritedNews.FetchPost.ViewModel)
   {
-    //nameTextField.text = viewModel.name
+          self.newData = viewModel.post ?? []
   }
+    
+    func displayFetchedManagedNews(viewModel: FavoritedNews.FetchManagedPost.ViewModel) {
+        newData.removeAll(keepingCapacity: false)
+        newData = viewModel.post ?? []
+    }
 }

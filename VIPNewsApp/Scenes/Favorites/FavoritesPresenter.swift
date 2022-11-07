@@ -14,18 +14,22 @@ import UIKit
 
 protocol FavoritesPresentationLogic
 {
-  func presentSomething(response: Favorites.Something.Response)
+    func presentFavoritedNews(response: FavoritedNews.FetchPost.Response)
+    func presentFetchedManagedNews(response: FavoritedNews.FetchManagedPost.Response)
 }
 
 class FavoritesPresenter: FavoritesPresentationLogic
 {
   weak var viewController: FavoritesDisplayLogic?
   
-  // MARK: Do something
-  
-  func presentSomething(response: Favorites.Something.Response)
+    func presentFavoritedNews(response: FavoritedNews.FetchPost.Response)
   {
-    let viewModel = Favorites.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+      let viewModel = FavoritedNews.FetchPost.ViewModel(post: response.data)
+    viewController?.displayUI(viewModel: viewModel)
   }
+    
+    func presentFetchedManagedNews(response: FavoritedNews.FetchManagedPost.Response) {
+        let viewModel = FavoritedNews.FetchManagedPost.ViewModel(post: response.data)
+        viewController?.displayFetchedManagedNews(viewModel: viewModel)
+    }
 }

@@ -14,28 +14,33 @@ import UIKit
 
 protocol FavoritesBusinessLogic
 {
-  func doSomething(request: Favorites.Something.Request)
+    func fetchFavoritedNews(request: FavoritedNews.FetchManagedPost.Request)
 }
 
 protocol FavoritesDataStore
 {
-  //var name: String { get set }
+    var favoritedNews: [Article]? { get }
 }
 
 class FavoritesInteractor: FavoritesBusinessLogic, FavoritesDataStore
 {
+    var coreDataWorker: NewsFetcher?
   var presenter: FavoritesPresentationLogic?
   var worker: FavoritesWorker?
+    var favoritedNews: [Article]?
   //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: Favorites.Something.Request)
+    func fetchFavoritedNews(request: FavoritedNews.FetchManagedPost.Request)
   {
-    worker = FavoritesWorker()
-    worker?.doSomeWork()
-    
-    let response = Favorites.Something.Response()
-    presenter?.presentSomething(response: response)
+      coreDataWorker = CoreDataWorker()
+             var datas = [Article]()
+      coreDataWorker?.retrieveValues(compilation: { data in
+          datas = data
+      })
+      self.favoritedNews = datas
+      let response = FavoritedNews.FetchPost.Response(data: datas)
+      self.presenter?.presentFavoritedNews(response: response)
   }
 }
