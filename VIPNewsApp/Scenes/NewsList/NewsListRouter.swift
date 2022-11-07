@@ -49,6 +49,6 @@ class NewsListRouter: NSObject, NewsListRoutingLogic, NewsListDataPassing
     private func passDataToNewDetails(source: NewsListDataStore, destination: inout NewsDetailsDataStore)
   {
       let selected = viewController?.tableView.indexPathForSelectedRow?.row
-      destination.new = source.new?[selected!]
+      destination.news = source.new?[selected!]
   }
 }
