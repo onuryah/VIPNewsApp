@@ -11,10 +11,27 @@
 //
 
 import UIKit
+import Alamofire
 
 class NewsListWorker
 {
-  func doSomeWork()
-  {
-  }
+    func fetchNews(completionHandler: @escaping([Article]?, Error?) -> Void) {
+        let urlString = UrlClass().getNewsUrl()
+        DispatchQueue.main.async {
+            AF.request(urlString, method: .get).validate().responseData { (response) in
+                switch response.result {
+                case .success(let value):
+                    do {
+                        let responseModel = try JSONDecoder().decode(NewsModel.self, from: value)
+                        guard responseModel.status == "ok" else {return}
+                        completionHandler(responseModel.articles, nil)
+                    } catch let err {
+                        print(String(describing: err))
+                    }
+                case .failure(let err):
+                    completionHandler(nil, err)
+                }
+            }
+        }
+    }
 }

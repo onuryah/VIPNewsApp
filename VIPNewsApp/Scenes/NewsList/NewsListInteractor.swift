@@ -33,7 +33,7 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
   func doSomething(request: NewsList.Something.Request)
   {
     worker = NewsListWorker()
-    worker?.doSomeWork()
+//    worker?.doSomeWork()
     
     let response = NewsList.Something.Response()
     presenter?.presentSomething(response: response)
