@@ -102,7 +102,7 @@ extension NewsListViewController {
                 .rx // 2
                 .items(cellIdentifier: "newCell", cellType: NewsCell.self)) { row, element, cell in // 3
                     cell.configureWithNew(withNew: element)
-                    
+                    self.itemsInCell(cell: cell, row: row)
                 }
                 .disposed(by: disposeBag) // 5
     }
@@ -121,5 +121,61 @@ extension NewsListViewController {
             .disposed(by: disposeBag) // 6    }
     }
 }
+
+extension NewsListViewController {
+    @objc private func favoritesButtonClicked() {
+//        self.router?.routeToFavorites(segue: nil)
+    }
+    
+    private func itemsInCell(cell: NewsCell, row: Int){
+        cell.likeButton.tag = row
+        cell.likeButton.addTarget(self, action: #selector(self.tapped), for: .touchUpInside)
+        self.getSavedList()
+        
+        cell.heartImageView.image = UIImage(named: "unliked_img")
+        self.savedArray.forEach { saved in
+            if saved.title == self.newData[row].title{
+                cell.heartImageView.image = UIImage(named: "liked_img")
+            }
+        }
+    }
+    
+    @objc private func tapped(sender: UIButton){
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        let cell = self.tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! NewsCell
+        self.tappedSettings(indexPath: indexPath, cell: cell)
+        self.tableView.reloadData()
+    }
+    
+    private func tappedSettings(indexPath : IndexPath, cell: NewsCell){
+        let title = self.newData[indexPath.row].title
+        let name = self.newData[indexPath.row].source.name
+        let content = self.newData[indexPath.row].content
+        let urlToImage = self.newData[indexPath.row].urlToImage
+        if cell.heartImageView.image == UIImage(named: "unliked_img"){
+            saveFavoritedNews(name: name, title: title, urlToImage: urlToImage, content: content)
+        }else if cell.heartImageView.image == UIImage(named: "liked_img"){
+            for i in self.savedArray{
+                if title == i.title{
+                    if let index = self.savedArray.firstIndex(where: {$0.title == title}) {
+                        interactor?.deleteData(name: name, title: title, urlToImage: urlToImage, content: content)
+                        self.savedArray.remove(at: index)
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension NewsListViewController {
+    private func sendNewsTitleToFirebase(title: String) {
+    }
+    private func startIndicator() {
+    }
+    private func saveFavoritedNews(name: String, title: String, urlToImage: String?, content: String?){
+        interactor?.save(name: name, title: title, urlToImage: urlToImage, content: content)
+    }
+}
+
 
 
