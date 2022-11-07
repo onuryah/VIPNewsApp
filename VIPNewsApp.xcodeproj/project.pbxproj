@@ -128,8 +128,7 @@
 		84BF31DF291924900055FC85 /* VIPNewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				84BF31E0291924900055FC85 /* AppDelegate.swift */,
-				84BF31E2291924900055FC85 /* SceneDelegate.swift */,
+				84BF3213291926BF0055FC85 /* Delegates */,
 				84BF31E4291924900055FC85 /* ViewController.swift */,
 				84BF31E6291924900055FC85 /* Main.storyboard */,
 				84BF31EC291924920055FC85 /* Assets.xcassets */,
@@ -157,6 +156,15 @@
 			path = VIPNewsAppUITests;
 			sourceTree = "<group>";
 		};
+		84BF3213291926BF0055FC85 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				84BF31E2291924900055FC85 /* SceneDelegate.swift */,
+				84BF31E0291924900055FC85 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		CC038C7AB19059BF3F7A8280 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +175,6 @@
 				A24697BDD43928D538F76DC9 /* Pods-VIPNewsAppTests.debug.xcconfig */,
 				47A8B3F2881A5726F4806670 /* Pods-VIPNewsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
