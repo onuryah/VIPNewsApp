@@ -7,6 +7,8 @@ target 'VIPNewsApp' do
 
   # Pods for VIPNewsApp
 
+    pod 'Alamofire'
+
   target 'VIPNewsAppTests' do
     inherit! :search_paths
     # Pods for testing
