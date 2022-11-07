@@ -15,18 +15,22 @@ import UIKit
 protocol NewsListBusinessLogic
 {
     func fetchNews(request: News.FetchPost.Request)
+    func getFavoritedNews(request: News.FetchManagedPost.Request)
 }
 
 protocol NewsListDataStore
 {
     var new: [Article]? { get }
+    var savedNews: [Article]? {get}
 }
 
 class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
 {
+    private var coreDataFetcherWorker: NewsFetcher?
     internal var new: [Article]?
     var presenter: NewsListPresentationLogic?
     var worker: NewsListWorker?
+    internal var savedNews: [Article]?
   
     func fetchNews(request: News.FetchPost.Request)
   {
@@ -37,4 +41,15 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
           self?.presenter?.presentFetchedNews(response: response)
       })
   }
+    
+    func getFavoritedNews(request: News.FetchManagedPost.Request) {
+        coreDataFetcherWorker = CoreDataWorker()
+        
+        coreDataFetcherWorker?.retrieveValues(compilation: { data in
+            self.savedNews = data
+            let response = News.FetchManagedPost.Response(data: data)
+            self.presenter?.presentFetchedManagedNews(response: response)
+            
+        })
+    }
 }

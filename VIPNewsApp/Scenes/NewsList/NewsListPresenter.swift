@@ -15,6 +15,7 @@ import UIKit
 protocol NewsListPresentationLogic
 {
     func presentFetchedNews(response: News.FetchPost.Response)
+    func presentFetchedManagedNews(response: News.FetchManagedPost.Response)
 }
 
 class NewsListPresenter: NewsListPresentationLogic
@@ -26,4 +27,10 @@ class NewsListPresenter: NewsListPresentationLogic
       let viewModel = News.FetchPost.ViewModel(post: response.data, errorMessage: response.errorMessage)
     viewController?.displayFetchedNews(viewModel: viewModel)
   }
+    
+    func presentFetchedManagedNews(response: News.FetchManagedPost.Response) {
+        let savedData = response.data
+        let viewModel = News.FetchManagedPost.ViewModel(post: savedData)
+        self.viewController?.displayFetchedManagedNews(viewModel: viewModel)
+    }
 }

@@ -17,6 +17,7 @@ import RxSwift
 protocol NewsListDisplayLogic: AnyObject
 {
     func displayFetchedNews(viewModel: News.FetchPost.ViewModel)
+    func displayFetchedManagedNews(viewModel: News.FetchManagedPost.ViewModel)
 }
 
 class NewsListViewController: UIViewController, NewsListDisplayLogic
@@ -31,6 +32,7 @@ class NewsListViewController: UIViewController, NewsListDisplayLogic
         }
     }
     private lazy var news : Observable<[Article]> = Observable.just(newData)
+    private var savedArray = [Article]()
 
   // MARK: Object lifecycle
   
@@ -79,6 +81,11 @@ extension NewsListViewController {
     {
         let request = News.FetchPost.Request()
         interactor?.fetchNews(request: request)
+    }
+    
+    func displayFetchedManagedNews(viewModel: News.FetchManagedPost.ViewModel) {
+        savedArray.removeAll(keepingCapacity: false)
+        savedArray = viewModel.post ?? []
     }
 }
 
