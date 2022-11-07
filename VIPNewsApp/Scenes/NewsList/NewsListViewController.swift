@@ -21,9 +21,16 @@ protocol NewsListDisplayLogic: AnyObject
 
 class NewsListViewController: UIViewController, NewsListDisplayLogic
 {
-  var interactor: NewsListBusinessLogic?
+    @IBOutlet weak var tableView: UITableView!
+    var interactor: NewsListBusinessLogic?
   var router: (NSObjectProtocol & NewsListRoutingLogic & NewsListDataPassing)?
-    private var newData : [Article] = []
+    private let disposeBag = DisposeBag()
+    private var newData : [Article] = [] {
+        didSet {
+            setupCellConfiguration()
+        }
+    }
+    private lazy var news : Observable<[Article]> = Observable.just(newData)
 
   // MARK: Object lifecycle
   
@@ -59,6 +66,7 @@ class NewsListViewController: UIViewController, NewsListDisplayLogic
   {
     super.viewDidLoad()
       getNewsList()
+      setupCellTapHandling()
   }
 }
 
@@ -75,5 +83,29 @@ extension NewsListViewController {
 }
 
 extension NewsListViewController {
+    private func setupCellConfiguration() {
+        //1
+        news
+            .bind(to: tableView
+                .rx // 2
+                .items(cellIdentifier: "newCell", cellType: NewsCell.self)) { row, element, cell in // 3
+                    cell.configureWithNew(withNew: element)
+                    
+                }
+                .disposed(by: disposeBag) // 5
+    }
     
+    private func setupCellTapHandling() {
+        tableView
+            .rx // 1
+            .modelSelected(Article.self) // 2
+            .subscribe(onNext: { [weak self] new in // 3
+                
+                if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow { // 5
+                    self?.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+                }
+            })
+            .disposed(by: disposeBag) // 6    }
+    }
+
 }
