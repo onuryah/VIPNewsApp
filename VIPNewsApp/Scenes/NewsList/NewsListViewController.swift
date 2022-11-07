@@ -156,6 +156,7 @@ extension NewsListViewController {
         let content = self.newData[indexPath.row].content
         let urlToImage = self.newData[indexPath.row].urlToImage
         if cell.heartImageView.image == UIImage(named: "unliked_img"){
+            startIndicator()
             saveFavoritedNews(name: name, title: title, urlToImage: urlToImage, content: content)
             sendNewsTitleToFirebase(title: title)
         }else if cell.heartImageView.image == UIImage(named: "liked_img"){

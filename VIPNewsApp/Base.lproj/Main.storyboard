@@ -136,7 +136,7 @@
         <!--News Details View Controller-->
         <scene sceneID="Hn5-Js-Tuz">
             <objects>
-                <viewController storyboardIdentifier="NewDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iep-yZ-NxW" customClass="NewsDetailsViewController" customModule="VIPNewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iep-yZ-NxW" customClass="NewsDetailsViewController" customModule="VIPNewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahT-cK-COA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
