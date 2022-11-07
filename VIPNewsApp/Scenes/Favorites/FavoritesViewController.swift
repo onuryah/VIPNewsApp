@@ -79,6 +79,7 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+      getSavedList()
   }
   
   // MARK: Do something
