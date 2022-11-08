@@ -19,12 +19,12 @@ protocol NewsDetailsPresentationLogic
 
 class NewsDetailsPresenter: NewsDetailsPresentationLogic
 {
-  weak var viewController: NewsDetailsDisplayLogic?
-  
+    weak var viewController: NewsDetailsDisplayLogic?
+    
     func presentNews(response: NewsDetails.FetchPost.Response)
-  {
-      let new = response.data
-      let viewModel = NewsDetails.FetchPost.ViewModel(post: new)
-      viewController?.displayUI(viewModel: viewModel)
-  }
+    {
+        let new = response.data
+        let viewModel = NewsDetails.FetchPost.ViewModel(post: new)
+        viewController?.displayUI(viewModel: viewModel)
+    }
 }

@@ -38,16 +38,16 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
     var worker: NewsListWorker?
     internal var savedNews: [Article]?
     private var firebaseEventsGetter : EventsGetter?
-  
+    
     func fetchNews(request: News.FetchPost.Request)
-  {
-    worker = NewsListWorker()
-      worker?.fetchNews(completionHandler: { [weak self] (data, error) in
-          self?.new = data
-          let response = News.FetchPost.Response(errorMessage: error?.localizedDescription, data: data)
-          self?.presenter?.presentFetchedNews(response: response)
-      })
-  }
+    {
+        worker = NewsListWorker()
+        worker?.fetchNews(completionHandler: { [weak self] (data, error) in
+            self?.new = data
+            let response = News.FetchPost.Response(errorMessage: error?.localizedDescription, data: data)
+            self?.presenter?.presentFetchedNews(response: response)
+        })
+    }
     
     func getFavoritedNews(request: News.FetchManagedPost.Request) {
         coreDataFetcherWorker = CoreDataWorker()
@@ -56,7 +56,6 @@ class NewsListInteractor: NewsListBusinessLogic, NewsListDataStore
             self.savedNews = data
             let response = News.FetchManagedPost.Response(data: data)
             self.presenter?.presentFetchedManagedNews(response: response)
-            
         })
     }
     

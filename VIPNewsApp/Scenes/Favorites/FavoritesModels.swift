@@ -14,34 +14,33 @@ import UIKit
 
 struct FavoritedNews
 {
-  struct FetchPost
-  {
-    struct Request
+    struct FetchPost
     {
-    }
-    struct Response
-    {
-      var data:[Article]?
-    }
-    struct ViewModel
-    {
-      var post:[Article]?
-    }
-  }
-    
-
-      struct FetchManagedPost
-      {
         struct Request
         {
         }
         struct Response
         {
-          var data:[Article]?
+            var data:[Article]?
         }
         struct ViewModel
         {
-          var post:[Article]?
+            var post:[Article]?
         }
-      }
+    }
+    
+    struct FetchManagedPost
+    {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            var data:[Article]?
+        }
+        struct ViewModel
+        {
+            var post:[Article]?
+        }
+    }
 }

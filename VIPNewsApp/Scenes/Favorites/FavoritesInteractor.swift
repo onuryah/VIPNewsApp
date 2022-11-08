@@ -25,22 +25,22 @@ protocol FavoritesDataStore
 class FavoritesInteractor: FavoritesBusinessLogic, FavoritesDataStore
 {
     var coreDataWorker: NewsFetcher?
-  var presenter: FavoritesPresentationLogic?
-  var worker: FavoritesWorker?
+    var presenter: FavoritesPresentationLogic?
+    var worker: FavoritesWorker?
     var favoritedNews: [Article]?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
+    //var name: String = ""
+    
+    // MARK: Do something
+    
     func fetchFavoritedNews(request: FavoritedNews.FetchManagedPost.Request)
-  {
-      coreDataWorker = CoreDataWorker()
-             var datas = [Article]()
-      coreDataWorker?.retrieveValues(compilation: { data in
-          datas = data
-      })
-      self.favoritedNews = datas
-      let response = FavoritedNews.FetchPost.Response(data: datas)
-      self.presenter?.presentFavoritedNews(response: response)
-  }
+    {
+        coreDataWorker = CoreDataWorker()
+        var datas = [Article]()
+        coreDataWorker?.retrieveValues(compilation: { data in
+            datas = data
+        })
+        self.favoritedNews = datas
+        let response = FavoritedNews.FetchPost.Response(data: datas)
+        self.presenter?.presentFavoritedNews(response: response)
+    }
 }

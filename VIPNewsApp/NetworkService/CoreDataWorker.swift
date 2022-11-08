@@ -9,8 +9,8 @@ import Foundation
 import CoreData
 import UIKit
 
- protocol NewsFetcher {
-     func retrieveValues(compilation: @escaping ([Article]) ->())
+protocol NewsFetcher {
+    func retrieveValues(compilation: @escaping ([Article]) ->())
 }
 protocol NewsAdjuster {
     func save(name: String, title: String, urlToImage: String?, content: String?)
@@ -19,7 +19,7 @@ protocol NewsAdjuster {
 
 struct CoreDataWorker: NewsFetcher, NewsAdjuster {
     
-     func retrieveValues(compilation: @escaping ([Article]) ->()){
+    func retrieveValues(compilation: @escaping ([Article]) ->()){
         var favoritedNewsArray = [Article]()
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate{
             let context = appDelegate.persistentContainer.viewContext
@@ -28,10 +28,10 @@ struct CoreDataWorker: NewsFetcher, NewsAdjuster {
             do{
                 let results = try context.fetch(fetchRequest)
                 for result in results as [NSManagedObject]{
-                     let name = result.value(forKey: "name") as? String
-                     let title = result.value(forKey: "title") as? String
-                     let content = result.value(forKey: "content") as? String?
-                     let urlToImage = result.value(forKey: "urlToImage") as? String?
+                    let name = result.value(forKey: "name") as? String
+                    let title = result.value(forKey: "title") as? String
+                    let content = result.value(forKey: "content") as? String?
+                    let urlToImage = result.value(forKey: "urlToImage") as? String?
                     
                     let favoritedNew = Article(source: Source(name: name!), title: title!, urlToImage: urlToImage ?? "", content: content ?? "")
                     favoritedNewsArray.append(favoritedNew)
@@ -57,7 +57,7 @@ struct CoreDataWorker: NewsFetcher, NewsAdjuster {
         }
     }
     
-     func deleteData(name: String, title: String, urlToImage: String?, content: String?){
+    func deleteData(name: String, title: String, urlToImage: String?, content: String?){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Entity>(entityName: "Entity")

@@ -14,7 +14,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-protocol FavoritesDisplayLogic: class
+protocol FavoritesDisplayLogic: AnyObject
 {
     func displayUI(viewModel: FavoritedNews.FetchPost.ViewModel)
     func displayFetchedManagedNews(viewModel: FavoritedNews.FetchManagedPost.ViewModel)
@@ -31,69 +31,55 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
         }
     }
     private let disposeBag = DisposeBag()
-  var interactor: FavoritesBusinessLogic?
-  var router: (NSObjectProtocol & FavoritesRoutingLogic & FavoritesDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = FavoritesInteractor()
-    let presenter = FavoritesPresenter()
-    let router = FavoritesRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    var interactor: FavoritesBusinessLogic?
+    var router: (NSObjectProtocol & FavoritesRoutingLogic & FavoritesDataPassing)?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-      getSavedList()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = FavoritesInteractor()
+        let presenter = FavoritesPresenter()
+        let router = FavoritesRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
 
-  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
+    }
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        getSavedList()
+    }
+
     func displayUI(viewModel: FavoritedNews.FetchPost.ViewModel)
-  {
-          self.newData = viewModel.post ?? []
-  }
+    {
+        self.newData = viewModel.post ?? []
+    }
     
     func displayFetchedManagedNews(viewModel: FavoritedNews.FetchManagedPost.ViewModel) {
         newData.removeAll(keepingCapacity: false)
@@ -108,27 +94,26 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
 
 extension FavoritesViewController {
     private func setupCellConfiguration() {
-      //1
+        //1
         news
             .bind(to: favoritesTableView
-              .rx // 2
-              .items(cellIdentifier: "favoritesCell", cellType: FavoritesCell.self)) { row, element, cell in // 3
-                  cell.configureWithNew(withNew: element)
-              }
-              .disposed(by: disposeBag) // 5
-        }
+                .rx // 2
+                .items(cellIdentifier: "favoritesCell", cellType: FavoritesCell.self)) { row, element, cell in // 3
+                    cell.configureWithNew(withNew: element)
+                }
+                .disposed(by: disposeBag) // 5
+    }
     
     private func setupCellTapHandling() {
         favoritesTableView
-          .rx // 1
-          .modelSelected(Article.self) // 2
-          .subscribe(onNext: { [weak self] new in // 3
-
-            if let selectedRowIndexPath = self?.favoritesTableView.indexPathForSelectedRow { // 5
-                self?.favoritesTableView.deselectRow(at: selectedRowIndexPath, animated: true)
-            }
-          })
-          .disposed(by: disposeBag) // 6
+            .rx // 1
+            .modelSelected(Article.self) // 2
+            .subscribe(onNext: { [weak self] new in // 3
+                
+                if let selectedRowIndexPath = self?.favoritesTableView.indexPathForSelectedRow { // 5
+                    self?.favoritesTableView.deselectRow(at: selectedRowIndexPath, animated: true)
+                }
+            })
+            .disposed(by: disposeBag) // 6
     }
-
 }

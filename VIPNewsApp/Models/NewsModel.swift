@@ -18,7 +18,7 @@ struct UrlClass {
     func getNewsUrl() -> String {
         return baseUrl+type+country+apiKey
     }
-//    You can send a request with this url to get large amount of content instead of using Core Data
+    //    You can send a request with this url to get large amount of content instead of using Core Data
     func getSelectedFavoriteNewUrl(searchName: String, searchTitle: String) -> String {
         return baseUrl+type+country+title+searchTitle+name+searchName+apiKey
     }

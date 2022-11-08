@@ -25,14 +25,11 @@ protocol NewsDetailsDataStore
 class NewsDetailsInteractor: NewsDetailsBusinessLogic, NewsDetailsDataStore
 {
     var news: Article!
-  var presenter: NewsDetailsPresentationLogic?
-  var worker: NewsDetailsWorker?  
+    var presenter: NewsDetailsPresentationLogic?
+    var worker: NewsDetailsWorker?
     func getNews()
-  {
-    worker = NewsDetailsWorker()
-      self.presenter?.presentNews(response: NewsDetails.FetchPost.Response(data: news))
-    
-//      let response = NewDetails.FetchPost.Response()
-//    presenter?.presentSomething(response: response)
-  }
+    {
+        worker = NewsDetailsWorker()
+        self.presenter?.presentNews(response: NewsDetails.FetchPost.Response(data: news))
+    }
 }

@@ -20,13 +20,13 @@ protocol NewsListPresentationLogic
 
 class NewsListPresenter: NewsListPresentationLogic
 {
-  weak var viewController: NewsListDisplayLogic?
-  
+    weak var viewController: NewsListDisplayLogic?
+    
     func presentFetchedNews(response: News.FetchPost.Response)
-  {
-      let viewModel = News.FetchPost.ViewModel(post: response.data, errorMessage: response.errorMessage)
-    viewController?.displayFetchedNews(viewModel: viewModel)
-  }
+    {
+        let viewModel = News.FetchPost.ViewModel(post: response.data, errorMessage: response.errorMessage)
+        viewController?.displayFetchedNews(viewModel: viewModel)
+    }
     
     func presentFetchedManagedNews(response: News.FetchManagedPost.Response) {
         let savedData = response.data

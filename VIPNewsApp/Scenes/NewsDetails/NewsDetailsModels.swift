@@ -14,18 +14,18 @@ import UIKit
 
 struct NewsDetails
 {
-  struct FetchPost
-  {
-    struct Request
+    struct FetchPost
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            var data:Article
+        }
+        struct ViewModel
+        {
+            var post:Article
+        }
     }
-    struct Response
-    {
-      var data:Article
-    }
-    struct ViewModel
-    {
-      var post:Article
-    }
-  }
 }

@@ -14,16 +14,16 @@ import UIKit
 
 @objc protocol NewsDetailsRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
 protocol NewsDetailsDataPassing
 {
-  var dataStore: NewsDetailsDataStore? { get }
+    var dataStore: NewsDetailsDataStore? { get }
 }
 
 class NewsDetailsRouter: NSObject, NewsDetailsRoutingLogic, NewsDetailsDataPassing
 {
-  weak var viewController: NewsDetailsViewController?
-  var dataStore: NewsDetailsDataStore?
+    weak var viewController: NewsDetailsViewController?
+    var dataStore: NewsDetailsDataStore?
 }

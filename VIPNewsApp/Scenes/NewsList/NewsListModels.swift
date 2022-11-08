@@ -14,34 +14,34 @@ import UIKit
 
 struct News
 {
-  struct FetchPost
-  {
-    struct Request
+    struct FetchPost
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            var errorMessage:String?
+            var data:[Article]?
+        }
+        struct ViewModel
+        {
+            var post:[Article]?
+            var errorMessage:String?
+        }
     }
-    struct Response
-    {
-      var errorMessage:String?
-      var data:[Article]?
-    }
-    struct ViewModel
-    {
-      var post:[Article]?
-      var errorMessage:String?
-    }
-  }
     struct FetchManagedPost
     {
-      struct Request
-      {
-      }
-      struct Response
-      {
-        var data:[Article]?
-      }
-      struct ViewModel
-      {
-        var post:[Article]?
-      }
+        struct Request
+        {
+        }
+        struct Response
+        {
+            var data:[Article]?
+        }
+        struct ViewModel
+        {
+            var post:[Article]?
+        }
     }
 }

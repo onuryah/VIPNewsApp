@@ -20,13 +20,13 @@ protocol FavoritesPresentationLogic
 
 class FavoritesPresenter: FavoritesPresentationLogic
 {
-  weak var viewController: FavoritesDisplayLogic?
-  
+    weak var viewController: FavoritesDisplayLogic?
+    
     func presentFavoritedNews(response: FavoritedNews.FetchPost.Response)
-  {
-      let viewModel = FavoritedNews.FetchPost.ViewModel(post: response.data)
-    viewController?.displayUI(viewModel: viewModel)
-  }
+    {
+        let viewModel = FavoritedNews.FetchPost.ViewModel(post: response.data)
+        viewController?.displayUI(viewModel: viewModel)
+    }
     
     func presentFetchedManagedNews(response: FavoritedNews.FetchManagedPost.Response) {
         let viewModel = FavoritedNews.FetchManagedPost.ViewModel(post: response.data)
