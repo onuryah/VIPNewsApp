@@ -43,6 +43,7 @@
 		84BF324C2919748E0055FC85 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF324B2919748E0055FC85 /* FavoritesCell.swift */; };
 		84BF324E291978430055FC85 /* FirebaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF324D291978430055FC85 /* FirebaseWorker.swift */; };
 		84BF3251291980530055FC85 /* LabelTopAlignmentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3250291980530055FC85 /* LabelTopAlignmentHelper.swift */; };
+		84BF325F291AB8FE0055FC85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84BF325E291AB8FE0055FC85 /* GoogleService-Info.plist */; };
 		A54F8D96BCE30A7BA1D8C324 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECFA0C64203E6441BFB6B3 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		84BF324B2919748E0055FC85 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		84BF324D291978430055FC85 /* FirebaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWorker.swift; sourceTree = "<group>"; };
 		84BF3250291980530055FC85 /* LabelTopAlignmentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTopAlignmentHelper.swift; sourceTree = "<group>"; };
+		84BF325E291AB8FE0055FC85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A24697BDD43928D538F76DC9 /* Pods-VIPNewsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPNewsAppTests/Pods-VIPNewsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5ECFA0C64203E6441BFB6B3 /* Pods_VIPNewsApp_VIPNewsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPNewsApp_VIPNewsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C194CADB17775856A7986AF3 /* Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-VIPNewsApp-VIPNewsAppUITests/Pods-VIPNewsApp-VIPNewsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				84BF3215291927D40055FC85 /* Scenes */,
 				84BF3213291926BF0055FC85 /* Delegates */,
 				84BF31E4291924900055FC85 /* ViewController.swift */,
+				84BF325E291AB8FE0055FC85 /* GoogleService-Info.plist */,
 				84BF31E6291924900055FC85 /* Main.storyboard */,
 				84BF31EC291924920055FC85 /* Assets.xcassets */,
 				84BF31EE291924920055FC85 /* LaunchScreen.storyboard */,
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BF31F0291924920055FC85 /* LaunchScreen.storyboard in Resources */,
+				84BF325F291AB8FE0055FC85 /* GoogleService-Info.plist in Resources */,
 				84BF31ED291924920055FC85 /* Assets.xcassets in Resources */,
 				84BF31E8291924900055FC85 /* Main.storyboard in Resources */,
 			);
