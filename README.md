@@ -14,6 +14,9 @@ Also if users select a favorited news in favorited news page, they route to deta
 
 It can be used scroll view to show bigger text. I didn't use that in this project, because content text is enought to show in a small label.
 
+In addition, i tried to write Unit Test but i couldn't because of lack of knowledge. There is no time(I have a lot of job from my company) to learn in this short period. Sorry about that.
+I will learn writing Unit Test perfectly as soon as possible.
+
 
 
 # API Reference
