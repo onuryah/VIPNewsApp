@@ -61,7 +61,10 @@ class NewsDetailsViewController: UIViewController, NewsDetailsDisplayLogic
         super.viewDidLoad()
         getNews()
     }
-    
+}
+
+
+extension NewsDetailsViewController {
     private func getNews()
     {
         interactor?.getNews()
