@@ -108,7 +108,7 @@ extension NewsListViewController {
                     cell.configureWithNew(withNew: element)
                     self.getSavedList()
                     self.itemsInCell(cell: cell, row: row)
-                    
+
                 }
                 .disposed(by: disposeBag) // 5
     }
