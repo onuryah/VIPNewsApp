@@ -12,13 +12,13 @@ I created a color for texts.
 Also if users select a favorited news in favorited news page, they route to details page to see details of favorited news.
 
 
-It can be used scroll view to show bigger text. I didn't use that in this project, because content text is enought to show in a small label.
+//It can be used scroll view to show bigger text. I didn't use that in this project, because content text is enought to show in a small label.
 
 
 
 # API Reference
 
-####Get all items
+
 GET/ https://newsapi.org/v2/top-headlines?country=us&apiKey=a71736c911b149e9acf84fdd00a7e98d
 
 
