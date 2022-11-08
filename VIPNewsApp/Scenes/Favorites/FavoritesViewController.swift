@@ -75,7 +75,9 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic
         super.viewDidLoad()
         getSavedList()
     }
+}
 
+extension FavoritesViewController {
     func displayUI(viewModel: FavoritedNews.FetchPost.ViewModel)
     {
         self.newData = viewModel.post ?? []
